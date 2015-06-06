@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @vacancy.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @vacancy.text %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @vacancy.salary %>
+</p>
+
+<p>
+  <strong>Salary type:</strong>
+  <%= @vacancy.salary_type %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @vacancy.schedule %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @vacancy.photo %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @vacancy.city %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @vacancy.postcode %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @vacancy.category %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @vacancy.status %>
+</p>
+
+<%= link_to 'Edit', edit_vacancy_path(@vacancy) %> |
+<%= link_to 'Back', vacancies_path %>

@@ -1,0 +1,57 @@
+<%= form_for(@vacancy) do |f| %>
+  <% if @vacancy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vacancy.errors.count, "error") %> prohibited this vacancy from being saved:</h2>
+
+      <ul>
+      <% @vacancy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </div>
+  <div class="field">
+    <%= f.label :salary %><br>
+    <%= f.number_field :salary %>
+  </div>
+  <div class="field">
+    <%= f.label :salary_type %><br>
+    <%= f.text_area :salary_type %>
+  </div>
+  <div class="field">
+    <%= f.label :schedule %><br>
+    <%= f.text_area :schedule %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_area :city %>
+  </div>
+  <div class="field">
+    <%= f.label :postcode %><br>
+    <%= f.text_area :postcode %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_area :category %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
